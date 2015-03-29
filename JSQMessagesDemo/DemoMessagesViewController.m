@@ -220,7 +220,7 @@
                                              displayName:self.demoData.users[randomUserId]
                                                     text:copyMessage.text];
         }
-        
+
         /**
          *  Upon receiving a message, you should:
          *
