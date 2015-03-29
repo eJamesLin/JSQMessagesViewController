@@ -128,10 +128,15 @@
                                         senderDisplayName:kJSQDemoAvatarDisplayNameSquires
                                                      date:[NSDate date]
                                                      text:@"Now with media messages!"],
+
+					 [[JSQMessage alloc] initWithSenderId:kJSQDemoAvatarIdSystem
+										senderDisplayName:kJSQDemoAvatarDisplayNameSystem
+													 date:[NSDate date]
+													 text:@"System message!"],
                      nil];
-    
+
     [self addPhotoMediaMessage];
-    
+
     /**
      *  Setting to load extra messages for testing/demo
      */

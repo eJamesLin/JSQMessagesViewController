@@ -61,6 +61,15 @@
 @property (copy, nonatomic) NSString *senderId;
 
 /**
+ *  The string identifier that uniquely identifies the system sending messages.
+ *
+ *  @discussion This property is used to determine if a message is incoming or outgoing or system.
+ *  All message data objects returned by `collectionView:messageDataForItemAtIndexPath:` are
+ *  checked against this identifier. This value must not be `nil`.
+ */
+@property (copy, nonatomic) NSString *systemId;
+
+/**
  *  Specifies whether or not the view controller should automatically scroll to the most recent message 
  *  when the view appears and when sending, receiving, and composing a new message.
  *
@@ -140,6 +149,24 @@
  *  including `collectionView:cellForItemAtIndexPath:`.
  */
 @property (copy, nonatomic) NSString *incomingMediaCellIdentifier;
+
+/**
+ *  The collection view cell identifier to use for dequeuing system message collection view cells
+ *  in the collectionView for text messages.
+ *
+ *  @discussion This cell identifier is used for incoming text message data items.
+ *  The default value is the string returned by `[JSQMessagesCollectionViewCellSystem cellReuseIdentifier]`.
+ *  This value must not be `nil`.
+ *
+ *  @see JSQMessagesCollectionViewCellSystem.
+ *
+ *  @warning Overriding this property's default value is *not* recommended.
+ *  You should only override this property's default value if you are proividing your own cell prototypes.
+ *  These prototypes must be registered with the collectionView for reuse and you are then responsible for
+ *  completely overriding many delegate and data source methods for the collectionView,
+ *  including `collectionView:cellForItemAtIndexPath:`.
+ */
+@property (copy, nonatomic) NSString *systemCellIdentifier;
 
 /**
  *  Specifies whether or not the view controller should show the typing indicator for an incoming message.

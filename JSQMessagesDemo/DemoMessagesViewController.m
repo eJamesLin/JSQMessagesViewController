@@ -43,6 +43,8 @@
      */
     self.senderId = kJSQDemoAvatarIdSquires;
     self.senderDisplayName = kJSQDemoAvatarDisplayNameSquires;
+
+	self.systemId = kJSQDemoAvatarIdSystem;
     
     
     /**
