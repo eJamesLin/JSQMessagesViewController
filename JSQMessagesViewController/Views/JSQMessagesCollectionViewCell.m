@@ -86,6 +86,16 @@
     return [NSString stringWithFormat:@"%@_JSQMedia", NSStringFromClass([self class])];
 }
 
+
+#pragma mark - cj added
+- (UILabel *)wtTimeLabel
+{
+	if (!_wtTimeLabel) {
+		_wtTimeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+	}
+	return _wtTimeLabel;
+}
+
 #pragma mark - Initialization
 
 - (void)awakeFromNib

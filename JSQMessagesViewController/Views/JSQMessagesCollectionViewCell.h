@@ -75,6 +75,8 @@
  */
 @interface JSQMessagesCollectionViewCell : UICollectionViewCell
 
+@property (strong, nonatomic) UILabel *wtTimeLabel;
+
 /**
  *  The object that acts as the delegate for the cell.
  */

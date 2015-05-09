@@ -6,6 +6,7 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 pod 'JSQSystemSoundPlayer'
+pod 'Masonry'
 
 target :JSQMessagesTests, :exclusive => true do
     pod 'OCMock'
