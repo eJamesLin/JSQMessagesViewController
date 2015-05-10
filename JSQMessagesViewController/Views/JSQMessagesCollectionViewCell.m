@@ -92,6 +92,8 @@
 {
 	if (!_wtTimeLabel) {
 		_wtTimeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+		_wtTimeLabel.font = [UIFont systemFontOfSize:11.0f];
+		_wtTimeLabel.textColor = [UIColor grayColor];
 	}
 	return _wtTimeLabel;
 }

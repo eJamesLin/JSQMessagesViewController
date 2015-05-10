@@ -36,7 +36,7 @@
 		make.leading.equalTo(self.messageBubbleContainerView.mas_trailing);
 		make.bottom.equalTo(self.messageBubbleContainerView.mas_bottom);
 		make.trailing.equalTo(self.contentView.mas_trailing);
-		make.height.equalTo(@36);
+		make.height.equalTo(@20);
 	}];
 }
 
