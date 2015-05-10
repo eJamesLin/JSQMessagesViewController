@@ -94,6 +94,7 @@
 		_wtTimeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 		_wtTimeLabel.font = [UIFont systemFontOfSize:11.0f];
 		_wtTimeLabel.textColor = [UIColor grayColor];
+		_wtTimeLabel.backgroundColor = [UIColor clearColor];
 	}
 	return _wtTimeLabel;
 }

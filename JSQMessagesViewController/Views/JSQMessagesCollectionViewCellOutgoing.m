@@ -17,6 +17,7 @@
 //
 
 #import "JSQMessagesCollectionViewCellOutgoing.h"
+#import "Masonry.h"
 
 @implementation JSQMessagesCollectionViewCellOutgoing
 
@@ -27,6 +28,16 @@
     [super awakeFromNib];
     self.messageBubbleTopLabel.textAlignment = NSTextAlignmentRight;
     self.cellBottomLabel.textAlignment = NSTextAlignmentRight;
+
+	//cj added for timelabel side by bubble message
+	[self.contentView addSubview:self.wtTimeLabel];
+	self.wtTimeLabel.textAlignment = NSTextAlignmentRight;
+	[self.wtTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.trailing.equalTo(self.messageBubbleContainerView.mas_leading);
+		make.bottom.equalTo(self.messageBubbleContainerView.mas_bottom);
+		make.leading.equalTo(self.contentView.mas_leading);
+		make.height.equalTo(@20);
+	}];
 }
 
 @end
