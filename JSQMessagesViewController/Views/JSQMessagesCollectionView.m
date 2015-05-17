@@ -24,12 +24,11 @@
 #import "JSQMessagesCollectionViewCellSystem.h"
 
 #import "JSQMessagesTypingIndicatorFooterView.h"
-#import "JSQMessagesLoadEarlierHeaderView.h"
 
 #import "UIColor+JSQMessages.h"
 
 
-@interface JSQMessagesCollectionView () <JSQMessagesLoadEarlierHeaderViewDelegate>
+@interface JSQMessagesCollectionView () 
 
 - (void)jsq_configureCollectionView;
 
