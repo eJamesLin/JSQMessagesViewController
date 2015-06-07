@@ -38,6 +38,29 @@
 		make.leading.equalTo(self.contentView.mas_leading);
 		make.height.equalTo(@(wtTimeLabelHeight));
 	}];
+
+	[self.contentView addSubview:self.otherGotMsgLabel];
+	[self.otherGotMsgLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.trailing.equalTo(self.wtTimeLabel.mas_trailing);
+		make.leading.equalTo(self.wtTimeLabel.mas_leading);
+		make.bottom.equalTo(self.wtTimeLabel.mas_top);
+		make.height.equalTo(@(wtTimeLabelHeight));
+	}];
+}
+
+#pragma mark - cj added
+- (UILabel *)otherGotMsgLabel
+{
+	if (!_otherGotMsgLabel) {
+		_otherGotMsgLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+		_otherGotMsgLabel.font = [UIFont systemFontOfSize:11.0f];
+		_otherGotMsgLabel.textColor = [UIColor grayColor];
+		_otherGotMsgLabel.backgroundColor = [UIColor clearColor];
+		_otherGotMsgLabel.text = @"已送達";
+		_otherGotMsgLabel.textAlignment = NSTextAlignmentRight;
+		_otherGotMsgLabel.hidden = YES;
+	}
+	return _otherGotMsgLabel;
 }
 
 @end
