@@ -75,6 +75,7 @@
  */
 @interface JSQMessagesCollectionViewCell : UICollectionViewCell
 
+#define wtTimeLabelHeight 15.0f
 @property (strong, nonatomic) UILabel *wtTimeLabel;
 
 /**

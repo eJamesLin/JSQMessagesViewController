@@ -36,7 +36,7 @@
 		make.trailing.equalTo(self.messageBubbleContainerView.mas_leading);
 		make.bottom.equalTo(self.messageBubbleContainerView.mas_bottom);
 		make.leading.equalTo(self.contentView.mas_leading);
-		make.height.equalTo(@20);
+		make.height.equalTo(@(wtTimeLabelHeight));
 	}];
 }
 
